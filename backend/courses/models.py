@@ -21,6 +21,14 @@ class Quarter(models.Model):
         return f"{self.name} ({self.school_year.name})"
 
 
+class GradeSection(models.Model):
+    name = models.CharField(max_length=255)
+    weight = models.DecimalField(decimal_places=2, max_digits=4)
+    
+    def __str__(self):
+        return f"{self.name} {self.weight}"
+
+
 class Course(models.Model):
     name = models.CharField(max_length=100)
     teacher = models.ForeignKey(Profile, limit_choices_to={'user_type': 'teacher'}, on_delete=models.CASCADE)
@@ -44,6 +52,7 @@ class Assignment(models.Model):
     due_date = models.DateField()
     assigned_course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='assignments')
     quarter = models.ForeignKey(Quarter, on_delete=models.CASCADE, related_name='assignments')
+    grade_section = models.ForeignKey(GradeSection, on_delete=models.CASCADE, related_name='assignments', null=True)
 
     def __str__(self):
         return f"{self.name} ({self.assigned_course.name})"

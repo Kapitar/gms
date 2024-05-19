@@ -10,5 +10,5 @@ class ListCreateUserAPIView(generics.ListCreateAPIView):
 
 class RetrieveUpdateUserAPIView(generics.RetrieveUpdateAPIView):
     serializer_class = ProfileSerializer
-    queryset = Profile.objects.all()
+    permission_classes = []
     lookup_field = "pk"
