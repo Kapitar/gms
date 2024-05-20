@@ -7,7 +7,7 @@ class IsStudent(permissions.BasePermission):
         return user_type == 'student'
     
 
-class IsStudent(permissions.BasePermission):
+class IsParent(permissions.BasePermission):
     def has_permission(self, request, view):
         user_type = request.user.profile.user_type
         return user_type == 'parent'
