@@ -44,7 +44,7 @@
                       </ul>
                     </li>
                     <li>
-                      <!-- <div class="text-xs font-semibold leading-6 text-gray-400">Your teams</div>
+                      <div class="text-xs font-semibold leading-6 text-gray-400">Your classes</div>
                       <ul role="list" class="-mx-2 mt-2 space-y-1">
                         <li v-for="team in teams" :key="team.name">
                           <a :href="team.href" :class="[team.current ? 'bg-gray-50 text-indigo-600' : 'text-gray-700 hover:text-indigo-600 hover:bg-gray-50', 'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold']">
@@ -52,7 +52,7 @@
                             <span class="truncate">{{ team.name }}</span>
                           </a>
                         </li>
-                      </ul> -->
+                      </ul>
                     </li>
                   </ul>
                 </nav>
@@ -83,7 +83,7 @@
               </ul>
             </li>
             <li>
-              <!-- <div class="text-xs font-semibold leading-6 text-gray-400">Your teams</div>
+              <div class="text-xs font-semibold leading-6 text-gray-400">Your classes</div>
               <ul role="list" class="-mx-2 mt-2 space-y-1">
                 <li v-for="team in teams" :key="team.name">
                   <a :href="team.href" :class="[team.current ? 'bg-gray-50 text-indigo-600' : 'text-gray-700 hover:text-indigo-600 hover:bg-gray-50', 'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold']">
@@ -91,10 +91,10 @@
                     <span class="truncate">{{ team.name }}</span>
                   </a>
                 </li>
-              </ul> -->
+              </ul>
             </li>
             <li class="-mx-6 mt-auto">
-              <a href="#" class="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-50">
+              <a href="/profile" class="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-50">
                 <img class="h-8 w-8 rounded-full bg-gray-50" src="https://www.rainforest-alliance.org/wp-content/uploads/2021/06/capybara-square-1.jpg.optimal.jpg" alt="" />
                 <span class="sr-only">Your profile</span>
                 <span aria-hidden="true">Artem Kim</span>
@@ -111,7 +111,7 @@
         <Bars3Icon class="h-6 w-6" aria-hidden="true" />
       </button>
       <div class="flex-1 text-sm font-semibold leading-6 text-gray-900">Dashboard</div>
-      <a href="#">
+      <a href="/profile">
         <span class="sr-only">Your profile</span>
         <img class="h-8 w-8 rounded-full bg-gray-50" src="https://www.rainforest-alliance.org/wp-content/uploads/2021/06/capybara-square-1.jpg.optimal.jpg" alt="" />
       </a>
@@ -140,7 +140,17 @@ const navigation = [
   { name: 'Dashboard', href: '/', icon: HomeIcon, current: isActive('/') },
   { name: 'Schedule', href: '/schedule', icon: AcademicCapIcon, current: isActive('/schedule') },
   { name: 'Grades', href: '/grades', icon: StarIcon, current: isActive('/grades') },
-  { name: 'Calendar', href: '/calendar', icon: CalendarIcon, current: isActive('/calendar') },
+  // { name: 'Calendar', href: '/calendar', icon: CalendarIcon, current: isActive('/calendar') },
+]
+
+const teams = [
+  { id: 1, name: 'AP Computer Science A', href: '#', initial: 'CS', current: false },
+  { id: 2, name: 'AP Computer Science Principles', href: '#', initial: 'CS', current: false },
+  { id: 3, name: 'AP Macroeconomics', href: '#', initial: 'M', current: false },
+  { id: 4, name: 'English 12', href: '#', initial: 'E', current: false },
+  { id: 5, name: 'Free period 3', href: '#', initial: 'F', current: false },
+  { id: 6, name: 'Music History', href: '#', initial: 'M', current: false },
+  { id: 7, name: 'Environmental Science', href: '#', initial: 'E', current: false },
 ]
 
 const sidebarOpen = ref(false)
