@@ -1,6 +1,53 @@
 <template>
   <main class="py-10 lg:pl-72">
     <div class="px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">Gradebook</h2>
+        <div class="ml-4 w-32">
+          <Listbox as="div" v-model="selected">
+            <div class="relative mt-2">
+              <ListboxButton class="relative w-full cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                <span class="block truncate">{{ selected.name }}</span>
+                <span class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+                  <ChevronUpDownIcon class="h-5 w-5 text-gray-400" aria-hidden="true" />
+                </span>
+              </ListboxButton>
+
+              <transition leave-active-class="transition ease-in duration-100" leave-from-class="opacity-100" leave-to-class="opacity-0">
+                <ListboxOptions class="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                  <ListboxOption as="template" v-for="person in people" :key="person.id" :value="person" v-slot="{ active, selected }">
+                    <li :class="[active ? 'bg-indigo-600 text-white' : 'text-gray-900', 'relative cursor-default select-none py-2 pl-3 pr-9']">
+                      <span :class="[selected ? 'font-semibold' : 'font-normal', 'block truncate']">{{ person.name }}</span>
+
+                      <span v-if="selected" :class="[active ? 'text-white' : 'text-indigo-600', 'absolute inset-y-0 right-0 flex items-center pr-4']">
+                        <CheckIcon class="h-5 w-5" aria-hidden="true" />
+                      </span>
+                    </li>
+                  </ListboxOption>
+                </ListboxOptions>
+              </transition>
+            </div>
+          </Listbox>
+        </div>
+      </div>
+
+      <div class="pb-5">
+
+        <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-2">
+          <div v-for="item in stats" :key="item.id" class="relative overflow-hidden rounded-lg bg-white px-4 pt-5 shadow sm:px-6 sm:pt-6">
+            <dt>
+              <div class="absolute rounded-md bg-indigo-500 p-3">
+                <component :is="item.icon" class="h-6 w-6 text-white" aria-hidden="true" />
+              </div>
+              <p class="ml-16 truncate text-sm font-medium text-gray-500">{{ item.name }}</p>
+            </dt>
+            <dd class="ml-16 flex items-baseline pb-6 sm:pb-7">
+              <p class="text-2xl font-semibold text-gray-900">{{ item.stat }}</p>
+            </dd>
+          </div>
+        </dl>
+      </div>
+
       <div class="hs-accordion-group">
         <div v-for="course in classes" :key="course.name" class="hs-accordion hs-accordion-active:border-gray-200 bg-white border border-transparent rounded-xl mb-4 shadow" id="hs-active-bordered-heading-one">
           <button class="hs-accordion-toggle hs-accordion-active:text-indigo-500 inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-gray-800 py-5 px-8 hover:text-gray-500 disabled:opacity-50 disabled:pointer-events-none" aria-controls="hs-basic-active-bordered-collapse-one">
@@ -14,7 +61,6 @@
             </div>
             <div class="block rounded-md bg-indigo-500 p-3 text-white text-xl font-semibold">
               97
-              <!-- <component :is="item.icon" class="h-6 w-6 text-white" aria-hidden="true" /> -->
             </div>
 
             <!-- <svg class="hs-accordion-active:hidden block size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -64,6 +110,9 @@
                         </template>
                       </tbody>
                     </table>
+                    <div class="final-grade text-center text-l font-semibold text-gray-900">
+                      Term Grade: A+
+                    </div>
                   </div>
                 </div>
               </div>
@@ -156,10 +205,26 @@
 <script setup>
 import { ref } from 'vue'
 import { Dialog, DialogPanel, TransitionChild, TransitionRoot } from '@headlessui/vue'
-import { HeartIcon, XMarkIcon } from '@heroicons/vue/24/outline'
+import { HeartIcon, XMarkIcon, StarIcon, SparklesIcon } from '@heroicons/vue/24/outline'
 import { PencilIcon, PlusIcon } from '@heroicons/vue/20/solid'
+import { Listbox, ListboxButton, ListboxLabel, ListboxOption, ListboxOptions } from '@headlessui/vue'
+import { CheckIcon, ChevronUpDownIcon } from '@heroicons/vue/20/solid'
 
-const open = ref(false)
+const open = ref(false);
+
+const people = [
+  { id: 1, name: 'Quarter 1' },
+  { id: 2, name: 'Quarter 2' },
+  { id: 3, name: 'Quarter 3' },
+  { id: 4, name: 'Quarter 4' }
+]
+
+const selected = ref(people[3])
+
+const stats = [
+  { id: 1, name: 'Weighted GPA', stat: '4.17', icon: StarIcon },
+  { id: 2, name: 'Unweighted GPA', stat: '3.97', icon: SparklesIcon },
+]
 
 const classes = [
   {
@@ -207,10 +272,12 @@ const classes = [
 </script>
 
 <script>
+import QuarterSelectComponent from '../components/QuarterSelectComponent.vue'
+
 export default {
   name: "GradesView",
   components: {
-
+    QuarterSelectComponent
   }
 }
 </script>
