@@ -14,11 +14,11 @@
           leave-to-class="opacity-0">
           <ListboxOptions
             class="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-            <ListboxOption as="template" v-for="person in people" :key="person.id" :value="person"
+            <ListboxOption as="template" v-for="term in terms" :key="term.id" :value="term"
               v-slot="{ active, selected }">
               <li
                 :class="[active ? 'bg-indigo-600 text-white' : 'text-gray-900', 'relative cursor-default select-none py-2 pl-3 pr-9']">
-                <span :class="[selected ? 'font-semibold' : 'font-normal', 'block truncate']">{{ person.name }}</span>
+                <span :class="[selected ? 'font-semibold' : 'font-normal', 'block truncate']">{{ term.name }}</span>
 
                 <span v-if="selected"
                   :class="[active ? 'text-white' : 'text-indigo-600', 'absolute inset-y-0 right-0 flex items-center pr-4']">
@@ -79,7 +79,7 @@ export default {
         { id: 3, name: 'Weighted GPA', stat: '4.21', icon: EnvelopeOpenIcon, link: "/grades" },
         { id: 4, name: 'Unweighted GPA', stat: '3.97', icon: EnvelopeOpenIcon, link: "/grades" },
       ],
-      people: [
+      terms: [
         { id: 1, name: 'Quarter 1' },
         { id: 2, name: 'Quarter 2' },
         { id: 3, name: 'Quarter 3' },
@@ -92,7 +92,7 @@ export default {
     }
   },
   beforeMount() {
-    this.selected = this.people[3];
+    this.selected = this.terms[3];
   }
 }
 </script>
