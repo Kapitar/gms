@@ -272,12 +272,11 @@ const classes = [
 </script>
 
 <script>
-import QuarterSelectComponent from '../components/QuarterSelectComponent.vue'
 
 export default {
   name: "GradesView",
   components: {
-    QuarterSelectComponent
+    
   }
 }
 </script>
