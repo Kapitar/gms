@@ -56,9 +56,8 @@
 </template>
 
 <script>
-import { ArrowDownIcon, ArrowUpIcon } from '@heroicons/vue/20/solid'
 import { Listbox, ListboxButton, ListboxLabel, ListboxOption, ListboxOptions } from '@headlessui/vue'
-import { CursorArrowRaysIcon, ClockIcon, UsersIcon, EnvelopeOpenIcon } from '@heroicons/vue/24/outline'
+import { ClockIcon, EnvelopeOpenIcon } from '@heroicons/vue/24/outline'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/vue/20/solid'
 
 export default {

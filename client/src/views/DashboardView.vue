@@ -40,8 +40,8 @@ import {
 } from '@heroicons/vue/24/outline'
 
 // import TodaySchedule from '../components/TodayScheduleComponent.vue';
-import RecentActivity from '../components/RecentActivityComponent.vue';
-import Stats from '../components/StatsComponent.vue';
+import RecentActivity from '../components/dashboard/RecentActivityComponent.vue';
+import Stats from '../components/dashboard/StatsComponent.vue';
 
 export default {
   name: "DashboardView",

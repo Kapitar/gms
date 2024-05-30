@@ -4,13 +4,14 @@
       <div class="w-full border-t border-gray-300" />
     </div>
     <div class="relative flex justify-center">
-      <span class="bg-gray-50 px-2 text-sm text-gray-500">Break 9:20 AM - 9:25 AM</span>
+      <span class="bg-gray-50 px-2 text-sm text-gray-500">{{ time }}</span>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "ClassSeperatorComponent"
+  name: "ClassSeperatorComponent",
+  props: ['time'],
 }
 </script>
