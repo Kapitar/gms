@@ -62,52 +62,52 @@ export default {
           time: "8:30 AM - 9:20 AM"
         },
         {
-          name: 'APCSP',
+          name: 'APCSA',
           teacher: 'Dr. Barnes',
           room: 'Room 201',
           finished: false,
           teacherImg: 'https://www.rainforest-alliance.org/wp-content/uploads/2021/06/capybara-square-1.jpg.optimal.jpg',
-          time: "8:30 AM - 9:20 AM"
+          time: "9:24 AM - 10:14 AM"
         },
         {
-          name: 'APCSP',
+          name: 'Pre-Calculus',
           teacher: 'Dr. Barnes',
-          room: 'Room 201',
+          room: 'Room B103',
           finished: false,
           teacherImg: 'https://www.rainforest-alliance.org/wp-content/uploads/2021/06/capybara-square-1.jpg.optimal.jpg',
-          time: "8:30 AM - 9:20 AM"
+          time: "10:31 AM - 11:21 AM"
         },
         {
-          name: 'APCSP',
+          name: 'English 11',
           teacher: 'Dr. Barnes',
-          room: 'Room 201',
+          room: 'Room 112',
           finished: false,
           teacherImg: 'https://www.rainforest-alliance.org/wp-content/uploads/2021/06/capybara-square-1.jpg.optimal.jpg',
-          time: "8:30 AM - 9:20 AM"
+          time: "11:25 AM - 12:15 PM"
         },
         {
-          name: 'APCSP',
+          name: 'Music History',
           teacher: 'Dr. Barnes',
-          room: 'Room 201',
+          room: 'Room 333',
           finished: false,
           teacherImg: 'https://www.rainforest-alliance.org/wp-content/uploads/2021/06/capybara-square-1.jpg.optimal.jpg',
-          time: "8:30 AM - 9:20 AM"
+          time: "12:51 PM - 01:41 PM"
         },
         {
-          name: 'APCSP',
+          name: 'Free period',
           teacher: 'Dr. Barnes',
-          room: 'Room 201',
+          room: 'Room 105',
           finished: false,
           teacherImg: 'https://www.rainforest-alliance.org/wp-content/uploads/2021/06/capybara-square-1.jpg.optimal.jpg',
-          time: "8:30 AM - 9:20 AM"
+          time: "01:45 PM - 02:35 PM"
         },
         {
-          name: 'APCSP',
+          name: 'Film studies',
           teacher: 'Dr. Barnes',
-          room: 'Room 201',
+          room: 'Room 401',
           finished: false,
           teacherImg: 'https://www.rainforest-alliance.org/wp-content/uploads/2021/06/capybara-square-1.jpg.optimal.jpg',
-          time: "8:30 AM - 9:20 AM"
+          time: "02:39 PM - 03:30 PM"
         },
       ]
     }

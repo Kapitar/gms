@@ -40,7 +40,7 @@
                 </td>
                 <td class="py-5 text-right">
                   <div class="flex justify-end">
-                    <a :href="action.href"
+                    <a href="#" @click.prevent="openModal(action)"
                       class="text-sm font-medium leading-6 text-indigo-600 hover:text-indigo-500">View<span
                         class="hidden sm:inline"> grade</span><span class="sr-only">, invoice #{{ action.invoiceNumber
                         }}, {{ action.client }}</span></a>
@@ -52,18 +52,24 @@
         </div>
       </div>
     </div>
+    <DetailsModal :open="open" :assignment="selectedAssignment" @close="closeModal" />
   </div>
 </template>
 
 <script>
+import { ref } from 'vue'
 import {
   ArrowDownCircleIcon,
   ArrowPathIcon,
   ArrowUpCircleIcon,
 } from '@heroicons/vue/20/solid'
+import DetailsModal from '../grades/DetailsModalComponent.vue'
 
 export default {
   name: "RecentActivityComponent",
+  components: {
+    DetailsModal
+  },
   data() {
     return {
       statuses: {
@@ -76,15 +82,25 @@ export default {
           id: 1,
           href: '#',
           name: 'APCSP Unit 10 Test',
+          section: "Summative 60%",
           description: 'Grade: 20/100',
+          notes: "Corrections due to March 31",
+          grade: "20/100",
+          avg: 20,
           status: 'Graded',
           date: 'March 21, 2024',
+          teacher: "Dr. Barnes",
           icon: ArrowUpCircleIcon,
         },
         {
           id: 2,
           href: '#',
           name: 'Pre-Calculus Homework',
+          section: "Formative 40%",
+          notes: "No description",
+          grade: "0/100",
+          teacher: "Mr. Hanawalt",
+          avg: 0,
           description: 'Missing',
           status: 'Missing',
           date: 'March 21, 2024',
@@ -94,13 +110,39 @@ export default {
           id: 3,
           href: '#',
           name: 'APCSA Unit 9 Test',
+          section: "Summative 60%",
           description: 'Grade: 20/100 -> 60/100',
+          notes: "No description",
+          grade: "60/100",
+          teacher: "Dr. Barnes",
+          avg: 60,
           status: 'Changed',
           date: 'March 21, 2024',
           icon: ArrowPathIcon,
         },
       ]
     }
+  },
+  setup() {
+    const open = ref(false);
+    const selectedAssignment = ref(null);
+
+    const openModal = (assignment) => {
+      selectedAssignment.value = assignment;
+      open.value = true;
+    };
+
+    const closeModal = () => {
+      open.value = false;
+      // selectedAssignment.value = null;
+    };
+
+    return {
+      open,
+      selectedAssignment,
+      openModal,
+      closeModal
+    };
   }
 }
 </script>
