@@ -58,7 +58,7 @@ export default {
           teacher: 'Dr. Barnes',
           room: 'Room 201',
           finished: true,
-          teacherImg: 'https://www.rainforest-alliance.org/wp-content/uploads/2021/06/capybara-square-1.jpg.optimal.jpg',
+          teacherImg: 'https://busanforeignschool.org/wp-content/uploads/2024/02/Dylan.png',
           time: "8:30 AM - 9:20 AM"
         },
         {
@@ -66,47 +66,47 @@ export default {
           teacher: 'Dr. Barnes',
           room: 'Room 201',
           finished: false,
-          teacherImg: 'https://www.rainforest-alliance.org/wp-content/uploads/2021/06/capybara-square-1.jpg.optimal.jpg',
+          teacherImg: 'https://busanforeignschool.org/wp-content/uploads/2024/02/Dylan.png',
           time: "9:24 AM - 10:14 AM"
         },
         {
           name: 'Pre-Calculus',
-          teacher: 'Dr. Barnes',
+          teacher: 'Mr. Hanawalt',
           room: 'Room B103',
           finished: false,
-          teacherImg: 'https://www.rainforest-alliance.org/wp-content/uploads/2021/06/capybara-square-1.jpg.optimal.jpg',
+          teacherImg: 'https://busanforeignschool.org/wp-content/uploads/2024/02/Matthew.png',
           time: "10:31 AM - 11:21 AM"
         },
         {
           name: 'English 11',
-          teacher: 'Dr. Barnes',
+          teacher: 'Mr. Bishop',
           room: 'Room 112',
           finished: false,
-          teacherImg: 'https://www.rainforest-alliance.org/wp-content/uploads/2021/06/capybara-square-1.jpg.optimal.jpg',
+          teacherImg: 'https://busanforeignschool.org/wp-content/uploads/2024/02/Alec.png',
           time: "11:25 AM - 12:15 PM"
         },
         {
           name: 'Music History',
-          teacher: 'Dr. Barnes',
+          teacher: 'Ms. Harris',
           room: 'Room 333',
           finished: false,
-          teacherImg: 'https://www.rainforest-alliance.org/wp-content/uploads/2021/06/capybara-square-1.jpg.optimal.jpg',
+          teacherImg: 'https://busanforeignschool.org/wp-content/uploads/2024/02/Nikki.png',
           time: "12:51 PM - 01:41 PM"
         },
         {
-          name: 'Free period',
-          teacher: 'Dr. Barnes',
+          name: 'Environmental Science',
+          teacher: 'Ms. Tempest',
           room: 'Room 105',
           finished: false,
-          teacherImg: 'https://www.rainforest-alliance.org/wp-content/uploads/2021/06/capybara-square-1.jpg.optimal.jpg',
+          teacherImg: 'https://busanforeignschool.org/wp-content/uploads/2024/02/Kyla.png',
           time: "01:45 PM - 02:35 PM"
         },
         {
-          name: 'Film studies',
-          teacher: 'Dr. Barnes',
+          name: 'Korean',
+          teacher: 'Ms. Lee',
           room: 'Room 401',
           finished: false,
-          teacherImg: 'https://www.rainforest-alliance.org/wp-content/uploads/2021/06/capybara-square-1.jpg.optimal.jpg',
+          teacherImg: 'https://busanforeignschool.org/wp-content/uploads/2024/02/Heejin.png',
           time: "02:39 PM - 03:30 PM"
         },
       ]

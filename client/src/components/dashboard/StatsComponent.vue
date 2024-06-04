@@ -74,8 +74,8 @@ export default {
   data() {
     return {
       stats: [
-        { id: 1, name: 'Attendance', stat: '97%', icon: ClockIcon },
-        { id: 2, name: 'Tardies', stat: '5', icon: ClockIcon },
+        { id: 1, name: 'Attendance', stat: '97%', icon: ClockIcon, link: "/grades" },
+        { id: 2, name: 'Tardies', stat: '5', icon: ClockIcon, link: "/grades" },
         { id: 3, name: 'Weighted GPA', stat: '4.21', icon: EnvelopeOpenIcon, link: "/grades" },
         { id: 4, name: 'Unweighted GPA', stat: '3.97', icon: EnvelopeOpenIcon, link: "/grades" },
       ],

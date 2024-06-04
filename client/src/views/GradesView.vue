@@ -79,22 +79,22 @@ const classes = [
       {
         name: 'Formative 40%',
         assignments: [
-          { name: 'Quiz 7.4-7.8', grade: '96/100', avg: '96', status: 'Graded', section: "Formative 40%", teacher: "Dr. Barnes", notes: "No description.", date: "May 20, 2024" },
-          { name: 'Quiz 8.1-8.3', grade: '98/100', avg: '98', status: 'Changed', section: "Formative 40%", teacher: "Dr. Barnes", notes: "No description.", date: "May 28, 2024" },
-          { name: 'Quiz 8.4-8.6', grade: '0/100', avg: '0', status: 'Missing', section: "Formative 40%", teacher: "Dr. Barnes", notes: "No description.", date: "May 28, 2024" },
+          { name: 'Quiz 7.4-7.8', grade: '96/100', avg: '96', status: 'Graded', section: "Formative 40%", teacher: "Dr. Barnes", teacher_photo: "https://busanforeignschool.org/wp-content/uploads/2024/02/Dylan.png", notes: "No description.", date: "May 20, 2024" },
+          { name: 'AP Exam Review', grade: '98/100', avg: '98', status: 'Changed', section: "Formative 40%", teacher: "Dr. Barnes", teacher_photo: "https://busanforeignschool.org/wp-content/uploads/2024/02/Dylan.png", notes: "No description.", date: "May 28, 2024" },
+          { name: 'Quiz 8.4-8.6', grade: '0/100', avg: '0', status: 'Missing', section: "Formative 40%", teacher: "Dr. Barnes", teacher_photo: "https://busanforeignschool.org/wp-content/uploads/2024/02/Dylan.png", notes: "No description.", date: "May 28, 2024" },
         ],
         average: 65
       },
       {
         name: 'Summative 60%',
         assignments: [
-          { name: 'Unit 7 Test', grade: '100/100', avg: '100', status: 'Graded', section: "Summative 60%", teacher: "Dr. Barnes", notes: "Correction due to June 4", date: "May 30, 2024" },
+          { name: 'Unit 7 Test', grade: '100/100', avg: '100', status: 'Graded', section: "Summative 60%", teacher: "Dr. Barnes", teacher_photo: "https://busanforeignschool.org/wp-content/uploads/2024/02/Dylan.png", notes: "Correction due to June 4", date: "May 30, 2024" },
         ],
         average: 100
       }
     ],
     average: 84,
-    grade: "B+"
+    grade: "B"
   },
   {
     name: "AP Computer Science Principles",
@@ -103,22 +103,22 @@ const classes = [
       {
         name: 'Formative 40%',
         assignments: [
-          { name: 'Quiz 7.4-7.8', grade: '96/100', avg: '96', status: 'Graded', section: "Formative 40%", teacher: "Dr. Barnes", notes: "No description.", date: "May 20, 2024" },
-          { name: 'Quiz 8.1-8.3', grade: '98/100', avg: '98', status: 'Changed', section: "Formative 40%", teacher: "Dr. Barnes", notes: "No description.", date: "May 28, 2024" },
-          { name: 'Quiz 8.4-8.6', grade: '0/100', avg: '0', status: 'Missing', section: "Formative 40%", teacher: "Dr. Barnes", notes: "No description.", date: "May 28, 2024" },
+          { name: 'Quiz 7.4-7.7', grade: '96/100', avg: '96', status: 'Graded', section: "Formative 40%", teacher: "Dr. Barnes", teacher_photo: "https://busanforeignschool.org/wp-content/uploads/2024/02/Dylan.png", notes: "No description.", date: "May 20, 2024" },
+          { name: 'AP Exam Review', grade: '96/100', avg: '99', status: 'Graded', section: "Formative 40%", teacher: "Dr. Barnes", teacher_photo: "https://busanforeignschool.org/wp-content/uploads/2024/02/Dylan.png", notes: "No description.", date: "May 20, 2024" },
+          { name: 'Quiz 7.8-7.11', grade: '100/100', avg: '100', status: 'Graded', section: "Formative 40%", teacher: "Dr. Barnes", teacher_photo: "https://busanforeignschool.org/wp-content/uploads/2024/02/Dylan.png", notes: "No description.", date: "May 20, 2024" },
         ],
-        average: 65
+        average: 97
       },
       {
         name: 'Summative 60%',
         assignments: [
-          { name: 'Unit 7 Test', grade: '100/100', avg: '100', status: 'Graded', section: "Summative 60%", teacher: "Dr. Barnes", notes: "Correction due to June 4", date: "May 30, 2024" },
+          { name: 'Unit 7 Project', grade: '100/100', avg: '100', status: 'Graded', section: "Summative 60%", teacher: "Dr. Barnes", teacher_photo: "https://busanforeignschool.org/wp-content/uploads/2024/02/Dylan.png", notes: "Correction due to June 4", date: "May 30, 2024" },
         ],
         average: 100
       }
     ],
-    average: 84,
-    grade: "B+"
+    average: 99,
+    grade: "A+"
   },
   {
     name: "Pre-Calculus",
@@ -127,23 +127,69 @@ const classes = [
       {
         name: 'Formative 40%',
         assignments: [
-          { name: 'Quiz 7.4-7.8', grade: '96/100', avg: '96', status: 'Graded', section: "Formative 40%", teacher: "Mr. Hanawalt", notes: "No description.", date: "May 20, 2024" },
-          { name: 'Quiz 8.1-8.3', grade: '98/100', avg: '98', status: 'Changed', section: "Formative 40%", teacher: "Mr. Hanawalt", notes: "No description.", date: "May 28, 2024" },
-          { name: 'Quiz 8.4-8.6', grade: '0/100', avg: '0', status: 'Missing', section: "Formative 40%", teacher: "Mr. Hanawalt", notes: "No description.", date: "May 28, 2024" },
+          { name: '6.1 HW Check', grade: '8/10', avg: '80', status: 'Graded', section: "Formative 40%", teacher: "Mr. Hanawalt", teacher_photo: "https://busanforeignschool.org/wp-content/uploads/2024/02/Matthew.png", notes: "No description.", date: "May 20, 2024" },
+          { name: 'Quiz 8.1-8.3', grade: '11/10', avg: '110', status: 'Graded', section: "Formative 40%", teacher: "Mr. Hanawalt", teacher_photo: "https://busanforeignschool.org/wp-content/uploads/2024/02/Matthew.png", notes: "No description.", date: "May 28, 2024" },
         ],
-        average: 65
+        average: 95
       },
       {
         name: 'Summative 60%',
         assignments: [
-          { name: 'Unit 7 Test', grade: '100/100', avg: '100', status: 'Graded', section: "Summative 60%", teacher: "Mr. Hanawalt", notes: "Correction due to June 4", date: "May 30, 2024" },
+          { name: 'Unit 7 Quiz', grade: '100/100', avg: '100', status: 'Graded', section: "Summative 60%", teacher: "Mr. Hanawalt", teacher_photo: "https://busanforeignschool.org/wp-content/uploads/2024/02/Matthew.png", notes: "Correction due to June 1", date: "May 30, 2024" },
         ],
         average: 100
       }
     ],
-    average: 84,
+    average: 98,
+    grade: "A+"
+  },
+  {
+    name: "English 11",
+    teacher: "Mr. Bishop",
+    sections: [
+      {
+        name: 'Formative 40%',
+        assignments: [
+          { name: 'Reading Guide #1', grade: '8/10', avg: '80', status: 'Graded', section: "Formative 40%", teacher: "Mr. Bishop", teacher_photo: "https://busanforeignschool.org/wp-content/uploads/2024/02/Alec.png", notes: "No description.", date: "May 20, 2024" },
+          { name: 'Reading Guide #1', grade: '9/10', avg: '90', status: 'Graded', section: "Formative 40%", teacher: "Mr. Bishop", teacher_photo: "https://busanforeignschool.org/wp-content/uploads/2024/02/Alec.png", notes: "No description.", date: "May 28, 2024" },
+        ],
+        average: 85
+      },
+      {
+        name: 'Summative 60%',
+        assignments: [
+          { name: 'Book Reflection', grade: '90/100', avg: '90', status: 'Graded', section: "Summative 60%", teacher: "Mr. Bishop", teacher_photo: "https://busanforeignschool.org/wp-content/uploads/2024/02/Alec.png", notes: "No description.", date: "May 30, 2024" },
+        ],
+        average: 90
+      }
+    ],
+    average: 88,
     grade: "B+"
   },
+  {
+    name: "Music History",
+    teacher: "Ms. Harris",
+    sections: [
+      {
+        name: 'Formative 40%',
+        assignments: [
+          { name: 'East Asia Music Genres', grade: '10/10', avg: '100', status: 'Graded', section: "Formative 40%", teacher: "Ms. Harris", teacher_photo: "https://busanforeignschool.org/wp-content/uploads/2024/02/Nikki.png", notes: "No description.", date: "May 20, 2024" },
+          { name: 'West Asia Reflection', grade: '10/10', avg: '100', status: 'Graded', section: "Formative 40%", teacher: "Ms. Harris", teacher_photo: "https://busanforeignschool.org/wp-content/uploads/2024/02/Nikki.png", notes: "No description.", date: "May 28, 2024" },
+        ],
+        average: 100
+      },
+      {
+        name: 'Summative 60%',
+        assignments: [
+          { name: 'Africa Essay', grade: '100/100', avg: '100', status: 'Graded', section: "Summative 60%", teacher: "Ms. Harris", teacher_photo: "https://busanforeignschool.org/wp-content/uploads/2024/02/Nikki.png", notes: "No description.", date: "May 30, 2024" },
+        ],
+        average: 100
+      }
+    ],
+    average: 100,
+    grade: "A+"
+  },
+  
 ]
 
 </script>

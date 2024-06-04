@@ -90,6 +90,7 @@ export default {
           status: 'Graded',
           date: 'March 21, 2024',
           teacher: "Dr. Barnes",
+          teacher_photo: "https://busanforeignschool.org/wp-content/uploads/2024/02/Dylan.png",
           icon: ArrowUpCircleIcon,
         },
         {
@@ -103,6 +104,7 @@ export default {
           avg: 0,
           description: 'Missing',
           status: 'Missing',
+          teacher_photo: "https://busanforeignschool.org/wp-content/uploads/2024/02/Matthew.png",
           date: 'March 21, 2024',
           icon: ArrowDownCircleIcon,
         },
@@ -117,6 +119,7 @@ export default {
           teacher: "Dr. Barnes",
           avg: 60,
           status: 'Changed',
+          teacher_photo: "https://busanforeignschool.org/wp-content/uploads/2024/02/Dylan.png",
           date: 'March 21, 2024',
           icon: ArrowPathIcon,
         },

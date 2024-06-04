@@ -71,7 +71,7 @@
                         <li class="flex items-center justify-between py-3">
                           <div class="flex items-center">
                             <img
-                              src="https://www.rainforest-alliance.org/wp-content/uploads/2021/06/capybara-square-1.jpg.optimal.jpg"
+                              :src="assignment.teacher_photo"
                               alt="" class="h-8 w-8 rounded-full" />
                             <p class="ml-4 text-sm font-medium text-gray-900">{{ assignment.teacher }}</p>
                           </div>
